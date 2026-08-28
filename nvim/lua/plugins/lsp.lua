@@ -9,6 +9,8 @@ require("mason-lspconfig").setup({
 		"ts_ls",
 		"jsonls",
 		"sqlls",
+		"gopls",
+		"marksman",
 	},
 })
 
@@ -144,6 +146,16 @@ vim.lsp.config("jdtls", {
 	capabilities = capabilities,
 })
 
+-- go
+vim.lsp.config("gopls", {
+	capabilities = capabilities,
+})
+
+-- markdown
+vim.lsp.config("marksman", {
+	capabilities = capabilities,
+})
+
 -- enable servers
 vim.lsp.enable({
 	"lua_ls",
@@ -153,4 +165,5 @@ vim.lsp.enable({
 	"jsonls",
 	"sqlls",
 	"jdtls",
+	"gopls",
 })
